@@ -25,10 +25,13 @@ public class ExampleScrollView : MonoBehaviour {
 
 
     public void OnClickMinusBtn() {
-        var lastGrid = GridRoot.GetChild(GridRoot.childCount - 1).gameObject;
-        if (lastGrid) {
-            Destroy(lastGrid);
-        }
+		if(GridRoot.childCount >= 1){
+			var lastGrid = GridRoot.GetChild(GridRoot.childCount - 1).gameObject;
+			if (lastGrid) {
+				Destroy(lastGrid);
+			}	
+		}
+       
     }
 
 }
